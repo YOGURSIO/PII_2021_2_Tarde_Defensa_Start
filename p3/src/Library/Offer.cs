@@ -33,5 +33,15 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public int Total()
+        {
+            int sumtotal = 0;
+            foreach (OfferItem item in items)
+            {
+                sumtotal += item.Quantity * item.Price;
+            } 
+            return sumtotal;
+        }
     }
 }
